@@ -76,10 +76,10 @@ class TicTacToe
     self.draw? || self.won?
   end
 
-  def winner(board)
-    winning = won?(board)
+  def winner
+    winning = self.won?
     if winning
-      board[winning[0]]
+      @board[winning[0]]
     end
   end
 
