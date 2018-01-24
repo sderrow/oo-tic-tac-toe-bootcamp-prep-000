@@ -87,7 +87,7 @@ class TicTacToe
     until self.over?
       self.turn
     end
-    if won?(board)
+    if self.won?
       puts "Congratulations #{winner(board)}!"
     else
       puts "Cat's Game!"
