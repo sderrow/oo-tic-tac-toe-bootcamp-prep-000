@@ -46,6 +46,14 @@ class TicTacToe
     end
   end
 
+  def turn_count
+    (@board.collect { |x| x == " " ? 0 : 1 }).inject(:+)
+  end
+
+  def current_player
+    self.turn_count % 2 == 0 ? "X" : "O"
+  end
+  
 end
 
 def won?(board)
@@ -71,14 +79,6 @@ def winner(board)
   if winning
     board[winning[0]]
   end
-end
-
-def turn_count(board)
-  (board.collect { |x| x == " " ? 0 : 1 }).inject(:+)
-end
-
-def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
 def valid_move?(board, index)
