@@ -42,10 +42,10 @@ class TicTacToe
       self.move(index, self.current_player)
       self.display_board()
     else
-      turn(board)
+      self.turn
     end
   end
-  
+
 end
 
 def won?(board)
