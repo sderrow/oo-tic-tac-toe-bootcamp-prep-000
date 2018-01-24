@@ -21,6 +21,10 @@ class TicTacToe
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
+
+  def input_to_index(user_input)
+    user_input.to_i - 1
+  end
   
 end
 
@@ -60,10 +64,6 @@ end
 
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
-end
-
-def input_to_index(user_input)
-  user_input.to_i - 1
 end
 
 def move(board, index, current_player)
