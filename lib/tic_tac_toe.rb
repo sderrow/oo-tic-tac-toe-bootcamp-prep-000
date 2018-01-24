@@ -72,8 +72,8 @@ class TicTacToe
     self.full? && !self.won?
   end
 
-  def over?(board)
-    draw?(board) || won?(board)
+  def over?
+    self.draw? || self.won?
   end
 
   def winner(board)
